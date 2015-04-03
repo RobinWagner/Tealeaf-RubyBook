@@ -1,4 +1,4 @@
-# Methods for arrays #
+# Methods for arrays
 #
 #
 
@@ -25,3 +25,39 @@ each_index => applies block to each index of array (returns original array)
 each_with_index => allows to manipulate both the indeces and the values of an array
 sort (sort!) => orders the elements of an array (non-destructive, destructive)
 product => returns an array which is the combination of all elements of all arrays (non-destructive)
+
+# Syntax / methods for hashes
+#
+#
+
+Old syntax:
+{ :key => 'value' }
+
+New syntax (Ruby 1.9):
+{ key: 'value' }
+
+person[:key] = value     => adds key value pair to hash (i.e. person)
+person.delete[:key]      => remove key value pair from hash which has specified key
+person[:key]             => retrieve value of specified key
+person.merge!(new_key)   => merge two hashes together (destructive -> modifies original hash (can also use non-destructive merge method))
+
+each => same as array except that both key and value need to be specified in block
+
+Optional parameters (e.g. greeting(name, options = {}) )
+empty?    => Check whether hash is empty
+
+# Decide if to use hashes or arrays
+#
+# 1. Does data need to be associated with specific label ==> If yes: Hash
+# 2. Does order matter?  ==> If yes: Array (Hashes also maintain order in Ruby >= Ruby 1.9)
+# 3. Is a 'stack' or 'queue' structure required? ==> Arrays are good for simple 'first-in-first-out' queues or 'last-in-first-out' stacks 
+
+
+# Common hash methods
+
+has_key?  ==> Returns true / false if entered key is present in hash
+select    ==> Returns any key-value pair that evaluates to true
+fetch     ==> Returns value for key passed into method (possible to specify option for return if no matching value)
+to_a      ==> Returns array version of hash (not destructive)
+keys      ==> Returns all keys of a hash (returned in array format)
+values    ==> Returns all values of a hash (returned in array format)
