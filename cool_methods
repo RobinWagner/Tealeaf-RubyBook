@@ -1,0 +1,27 @@
+# Methods for arrays #
+#
+#
+
+pop
+unshift => adds specified element to front of the list
+push, <<   => adds specified element to the end of the list
+each => applies block to each element of block, but return original array
+map, collect (map!, collect!) => applies block to each element of block & returns new array with results
+=======> Use each for iteration and map for transformation!
+delete_at => deletes at specified index
+delete => deletes all instances of provided argument
+uniq, uniq! => deletes all duplications in an array (does not mutate / mutates array)
+Select => returns values which return true for a certain expression
+to_s
+
+Nested arrays
+
+
+Common array methods
+
+include?
+flatten (flatten!) => turns a multi-dimensional array into a one-dimensional array
+each_index => applies block to each index of array (returns original array)
+each_with_index => allows to manipulate both the indeces and the values of an array
+sort (sort!) => orders the elements of an array (non-destructive, destructive)
+product => returns an array which is the combination of all elements of all arrays (non-destructive)
